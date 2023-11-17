@@ -1,8 +1,10 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const server = express();
+const cors = require("cors");
 
 dotenv.config({ path: "./.env" });
+server.use(cors());
 
 require("../database/connect");
 require("../model/UserSchema");
